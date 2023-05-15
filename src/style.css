@@ -43,3 +43,4 @@ a:hover{cursor: pointer;
 
 .Fahren,
 .Cal{font-size: 20px;}
+#Description{text-transform: capitalize;}
