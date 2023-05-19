@@ -60,13 +60,16 @@ a{color:blueviolet;
 
 
 #Description{text-transform: capitalize;}
-#search-city{padding: 5px 120px;
+#search-city{padding: 5px 100px;
               font-family:monospace;
               font-weight: bolder;
-              border-radius: 4px;
+              border-radius: 8px;
               border: 2px solid orangered;
               font-size: 20px;}
-.weather-forecast{padding: 30px;
-                  text-align: center;}
+.weather-forecast{padding: 50px 10px 10px;
+                  text-align: center;
+                  color:black;
+                  font-weight: 600;}
 #Tue-Forecast-Icon{display: block;
                    margin: 0 auto;}
+.forecast-temp-min{opacity: 0.5;}
