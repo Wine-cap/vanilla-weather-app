@@ -42,15 +42,15 @@ li{list-style-type: none;
   margin-left: 10px;
   padding-top: 0;
 }
-a{color:blueviolet;
+a{color:orangered;
   text-decoration: none;
   font-size: 20px;
-  font-weight: 20px;};
+  font-weight: 500;};
 
 #gitHub-Link{text-decoration: none;
-  color: blueviolet;}
+  color: orangered;}
 #gitHub-Link:hover{cursor: pointer;
-        color: orangered;}
+        color: blueviolet;}
 
 .Active{color:black;
      cursor: default;};
@@ -60,12 +60,12 @@ a{color:blueviolet;
 
 
 #Description{text-transform: capitalize;}
-#search-city{padding: 5px 100px;
+#search-city{padding: 5px 80px;
               font-family:monospace;
               font-weight: bolder;
               border-radius: 8px;
               border: 2px solid orangered;
-              font-size: 20px;}
+              font-size: 25px;}
 .weather-forecast{padding: 50px 10px 10px;
                   text-align: center;
                   color:black;
@@ -73,3 +73,6 @@ a{color:blueviolet;
 #Tue-Forecast-Icon{display: block;
                    margin: 0 auto;}
 .forecast-temp-min{opacity: 0.5;}
+#Humidity,
+#Wind{color:orangered;
+      font-weight: 500;}
