@@ -16,8 +16,30 @@ function formatDate(){
 }
 
 
+function showForecast(){
+  let weatherForecast=document.querySelector("#forecast");
+  let forecastHTML=`<div class="row">`
+  let days=["Thu","Fri","Sat","Sun","Mon","Tue"];
+  days.forEach(function(day){
+forecastHTML=forecastHTML + `
+        <div class="col-2">
+          ${day}
+          
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/005/502/367/original/solid-cloud-illustration-glyph-icon-free-vector.jpg"
+            alt="Clear" width="30px" id="Tue-Forecast-Icon">
+            
+             <span class="forecast-temp-max">30°</span>
+              <span class="forecast-temp-min">25°</span>
+        </div>
+      `;})
+forecastHTML=forecastHTML + `</div>`;
 
+weatherForecast.innerHTML=forecastHTML};
 
+function getCoord(coordinates){
+  console.log(coordinates);
+}
 
 
 function displayTemp(response){
@@ -43,7 +65,14 @@ function displayTemp(response){
 
   let icon=document.querySelector("#icon");
   icon.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  
+  console.log(response);
+  
 }
+
+
+
+
 function search(city){
   let apiKey= "701f06352d61835bc4fc894e7b084629";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city} &appid=${apiKey}&units=metric`;
@@ -85,4 +114,6 @@ let fahrenLink=document.querySelector("#Fahren");
 fahrenLink.addEventListener("click",showFahrenTemp);
 
 let celsiusLink=document.querySelector("#Cel");
-celsiusLink.addEventListener("click",celsiusTemp)
+celsiusLink.addEventListener("click",celsiusTemp);
+
+showForecast();
