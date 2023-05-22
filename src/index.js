@@ -14,6 +14,12 @@ function formatDate(){
   return `${weekday} ${hours}:${minute}`;
 }
 
+function forecastDaily(timestamp){
+  let date=new Date(timestamp* 1000);
+  let weekDay = date.getDay();
+  let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  return days[weekDay];
+}
 
 function showForecast(response){
   console.log(response.data.daily);
@@ -21,21 +27,22 @@ function showForecast(response){
 
   let weatherForecast=document.querySelector("#forecast");
   let forecastHTML=`<div class="row">`
-  forecast.forEach(function (forecastTemperature){
+  forecast.forEach(function (forecastday, index){
+    if (index<6) {
 forecastHTML=forecastHTML + `
         <div class="col-2">
-          ${forecastTemperature.day}
+          ${forecastDaily(forecastday.time)}
           
           <img
-            src="https://openweathermap.org/img/wn/@2x.png">
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastday.condition.icon}.png" width="45px">
             
-             <span class="forecast-temp-max">${Math.round(forecastTemperature.maximun)}°</span>
-              <span class="forecast-temp-min">${Math.round(forecastTemperature.minimum)}°</span>
+             <span class="forecast-temp-max">${Math.round(forecastday.temperature.maximum)}°</span>
+              <span class="forecast-temp-min">${Math.round(forecastday.temperature.minimum)}°</span>
         </div>
-      `;});
+      `;} });
 forecastHTML=forecastHTML + `</div>`;
 
-weatherForecast.innerHTML=forecastHTML};
+weatherForecast.innerHTML=forecastHTML };
 
 function getCoord(coordinates){
   let apiKey= "d8051fat3o41a5f56ed7b9b9ed32a234";
