@@ -1,11 +1,11 @@
 function formatDate(){
   let date=new Date();
   let hours=date.getHours();
-  if (hours<10) {hours=`0 ${hours}`
+  if (hours<10) {hours=`0${hours}`
     
   };
   let minute=date.getMinutes();
-  if (minute<10) {minute=`0 ${minute}`
+  if (minute<10) {minute=`0${minute}`
     
   }
   let days=["SUN","MON","TUE","WED","THU","FRI","SAT"];
@@ -34,7 +34,7 @@ forecastHTML=forecastHTML + `
           ${forecastDaily(forecastday.time)}
           
           <img
-            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastday.condition.icon}.png" width="45px">
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastday.condition.icon}.png" width="50px">
             
              <span class="forecast-temp-max">${Math.round(forecastday.temperature.maximum)}°</span>
               <span class="forecast-temp-min">${Math.round(forecastday.temperature.minimum)}°</span>
