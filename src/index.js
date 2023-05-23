@@ -53,13 +53,17 @@ function getCoord(coordinates){
 
 
 function displayTemp(response){ 
+  console.log(response.data);
   celsiusTempValue=response.data.temperature.current;
   let cityTemp=Math.round(response.data.temperature.current);
   let mainTemp=document.querySelector(".Temp-value");
   mainTemp.innerHTML=cityTemp;
 
-  let cityName=document.querySelector("h1");
+  let cityName=document.querySelector(".city");
   cityName.innerHTML=response.data.city;
+  
+  let countryName=document.querySelector(".country");
+  countryName.innerHTML=response.data.country;
   
   let weatherDescription=document.querySelector("#Description");
   weatherDescription.innerHTML=(response.data.condition.description);
