@@ -8,21 +8,23 @@
 .container{
   position: relative;
   top:30px;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 30px 30px;
-  border: 2px solid orangered;
+  border: 2px solid #00204a;
   border-radius: 5px;
-  background: linear-gradient(179.4deg, rgb(253, 240, 233) 2.2%, rgb(194, 255, 227) 96.2%);}
+  border-style: dotted;
+  background-color:#F76B8A;}
 small {
   position: relative;
-  left: 350px;
+  left:250px;
   top: 25px;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 h1{font-size: 30px;
-  color: gray;
+  color:blanchedalmond;
   font-weight: bold;
   margin-bottom: 0;
   line-height: 28px;}
@@ -36,21 +38,21 @@ padding: 0;}
 
 li{list-style-type: none;
    padding: 0;
-   color: gray;}
+   color: blanchedalmond;}
 
 .Temp-value{font-size: 50px;
   margin-left: 10px;
   padding-top: 0px;
 }
-a{color:orangered;
+a{color:gold;
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;};
 
 #gitHub-Link{text-decoration: none;
-  color: orangered;}
+  color: blueviolet;}
 #gitHub-Link:hover{cursor: pointer;
-        color: blueviolet;}
+        color: red;}
 
 .Active{color:black;
      cursor: default;};
@@ -60,11 +62,11 @@ a{color:orangered;
 
 
 #Description{text-transform: capitalize;}
-#search-city{padding: 0px 80px;
+#search-city{padding: 0px 150px;
               font-family:monospace;
               font-weight: bolder;
               border-radius: 8px;
-              border: 2px solid orangered;
+              border: 2px solid black;
               font-size: 25px;}
 .weather-forecast{padding: 50px 10px 10px;
                   text-align: center;
@@ -74,7 +76,7 @@ a{color:orangered;
                    margin: 0 auto;}
 .forecast-temp-min{opacity: 0.5;}
 #Humidity,
-#Wind{color:orangered;
+#Wind{color:black;
       font-weight: 500;};
 
 
